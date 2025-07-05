@@ -56,9 +56,3 @@ All analyses are implemented in R
 PCA and statistical testing are based on large-scale bioinformatics workflows
 
 Visualization and network clustering provide intuitive insights beyond numerical output
-
-
----
-
-Let me know if you want a version with links to figures, datasets, or code files, or if you’d like this wrapped up as a downloadable `README.md`.
-
