@@ -1,58 +1,55 @@
-# Big Data Applications and Analysis
+# Big Data and High-Dimensional Analysis in R
 
-This repository contains various data analysis exercises related to bioinformatics, big data regression, and network modeling. Each exercise demonstrates practical use of R for exploratory analysis, dimensionality reduction, hypothesis testing, and modeling.
+## Overview
 
----
+This repository presents a series of projects showcasing how statistical models and R programming are applied to **large-scale** and **high-dimensional** datasets across various domains, including **genomics**, **airline transportation**, and **network science**.
 
-## 📁 Contents
+It highlights the dual challenges in modern data science:
+- Datasets with **millions of observations** (big data)
+- Datasets with **thousands of variables and few observations** (high-dimensional)
 
-### 🧬 Exercise 1: Gene Expression Analysis (Leukemia Dataset)
-- **Dataset**: Gene expression data of 60 bone marrow samples across 20,172 genes
-- **Goal**: Compare gene expression between AML (Acute Myeloid Leukemia) and NOL (Non-leukemia)
-- **Tasks**:
-  - Exploratory data analysis (boxplots, QQ-plots, heatmaps)
-  - Principal Component Analysis (PCA) on raw and transposed data
-  - Independent t-tests per gene
-  - p-value distribution and null hypothesis proportion estimation
-  - FWER, FDR, and pFDR control at α = 0.01
-  - Visualize significant genes and PCA colored by FDR significance
-
-### ✈️ Exercise 2: Big Data Regression (Airline Delay)
-- **Dataset**: US flight data from 1987–2008 (used: 1993)
-- **Goal**: Model arrival delay based on flight characteristics
-- **Variables**:
-  - Month, weekday, distance, departure delay, departure time
-- **Model**: GLM to predict arrival delay
-- **Results**:
-  - Interpretations of coefficients
-  - BIC/AIC model selection
-  - Seasonal delay pattern comparison
-
-### 👥 Exercise 3: Social Network Analysis
-- **Data**: Friendship graph of 20 individuals from personal circles
-- **Goal**: Visualize and cluster a social graph
-- **Tasks**:
-  - Create adjacency matrix
-  - Compute edge density and centrality
-  - Cluster and compare to real-life groups (school, family, university, etc.)
-  - Analyze mismatches and clustering logic
+All work was completed in the context of applied coursework in the MSc in Applied Statistics.
 
 ---
 
-## 📊 Tools & Libraries
+## Projects Covered
 
-```r
-ggplot2
-pheatmap
-stats
-igraph
-limma
-qvalue
-biglm
+- **Genomics**: Gene expression dataset with **20,172 features × 60 samples** (Leukemia study)  
+  → A classic **"large p, small n"** problem involving variable selection, PCA, and multiple testing (FWER, FDR)
 
-📌 Notes
-All analyses are implemented in R
+- **Airline Flights (USA)**: Flight-level data with **millions of rows**  
+  → Regression modeling, feature engineering, model selection using `biglm`
 
-PCA and statistical testing are based on large-scale bioinformatics workflows
+- **Network Analysis**: Real-world directed graph with user interactions  
+  → Community detection, centrality, and graph visualization using `igraph`
 
-Visualization and network clustering provide intuitive insights beyond numerical output
+---
+
+## Key Techniques & Concepts
+
+- **Principal Component Analysis (PCA)** for dimensionality reduction  
+- **Multiple testing corrections**: Bonferroni, FDR, pFDR, and q-values  
+- **Model selection**: AIC, BIC, likelihood ratio tests  
+- **GLMs and stepwise regression** on large datasets  
+- **Graph theory**: degree, betweenness, clustering in directed networks
+
+---
+
+## Tools Used
+
+- **R**  
+  - `biglm`, `limma`, `igraph`, `ggplot2`, `tidyverse`  
+- Efficient handling of large data with memory-aware tools  
+- Visualization and diagnostics for both high-p and high-n settings
+
+---
+
+## Applications Across Fields
+
+Although examples come from **genetics**, **air travel**, and **social networks**, the methods are broadly applicable in:
+- Business & marketing analytics  
+- Health informatics  
+- Social science research  
+- High-throughput bioinformatics
+
+This repository reflects the increasing importance of **statistical thinking at scale**, where choosing the right model, correction method, or visualization becomes critical under **data-rich conditions**.
